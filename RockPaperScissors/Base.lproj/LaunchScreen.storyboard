@@ -13,83 +13,15 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your weapon!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DF4-lO-Emc">
-                                <rect key="frame" x="76" y="48" width="262" height="33.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fVg-wj-svY" userLabel="ButtonWrapperView">
-                                <rect key="frame" x="0.0" y="171.66666666666666" width="414" height="99.999999999999972"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UP8-dk-xJE" userLabel="Rock">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="100"/>
-                                        <state key="normal" title="Rock"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmo-vU-W44" userLabel="Paper">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="100"/>
-                                        <state key="normal" title="Paper"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTA-bf-shg" userLabel="Scissors">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="100"/>
-                                        <state key="normal" title="Scissors"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.37647058820000001" green="0.72156862749999995" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="UP8-dk-xJE" firstAttribute="width" secondItem="Xmo-vU-W44" secondAttribute="width" id="3R5-li-gdY"/>
-                                    <constraint firstAttribute="height" constant="100" id="6JG-9Y-pay"/>
-                                    <constraint firstItem="Xmo-vU-W44" firstAttribute="centerY" secondItem="fVg-wj-svY" secondAttribute="centerY" id="80h-Kd-2yv"/>
-                                    <constraint firstItem="QTA-bf-shg" firstAttribute="width" secondItem="Xmo-vU-W44" secondAttribute="width" id="DJu-bj-ojG"/>
-                                    <constraint firstItem="Xmo-vU-W44" firstAttribute="centerX" secondItem="fVg-wj-svY" secondAttribute="centerX" id="EMk-gn-sdj"/>
-                                    <constraint firstItem="Xmo-vU-W44" firstAttribute="width" secondItem="fVg-wj-svY" secondAttribute="width" multiplier="0.333333" id="Gj3-hh-T3u"/>
-                                    <constraint firstItem="UP8-dk-xJE" firstAttribute="centerY" secondItem="Xmo-vU-W44" secondAttribute="centerY" id="KF9-xi-zUR"/>
-                                    <constraint firstItem="QTA-bf-shg" firstAttribute="leading" secondItem="Xmo-vU-W44" secondAttribute="trailing" id="MXg-Lu-iaQ"/>
-                                    <constraint firstItem="Xmo-vU-W44" firstAttribute="height" secondItem="fVg-wj-svY" secondAttribute="height" id="Mna-ON-aI0"/>
-                                    <constraint firstItem="Xmo-vU-W44" firstAttribute="leading" secondItem="UP8-dk-xJE" secondAttribute="trailing" id="Rw3-oF-CuY"/>
-                                    <constraint firstItem="QTA-bf-shg" firstAttribute="centerY" secondItem="Xmo-vU-W44" secondAttribute="centerY" id="c01-f8-A4r"/>
-                                    <constraint firstItem="UP8-dk-xJE" firstAttribute="height" secondItem="Xmo-vU-W44" secondAttribute="height" id="fl3-Hs-Ibg"/>
-                                    <constraint firstItem="QTA-bf-shg" firstAttribute="height" secondItem="Xmo-vU-W44" secondAttribute="height" id="oAR-D4-3d1"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9I-J0-YqT" userLabel="ComputerChoiceView">
-                                <rect key="frame" x="0.0" y="271.66666666666669" width="414" height="368.00000000000006"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enemy's Choice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOW-nF-zxa">
-                                        <rect key="frame" x="146" y="40" width="122" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.2666666667" green="0.57647058819999997" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="MOW-nF-zxa" firstAttribute="centerX" secondItem="y9I-J0-YqT" secondAttribute="centerX" id="Odj-uM-w0d"/>
-                                    <constraint firstItem="MOW-nF-zxa" firstAttribute="top" secondItem="y9I-J0-YqT" secondAttribute="top" constant="40" id="wkM-R1-ZdT"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="fVg-wj-svY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5Nr-9V-gTw"/>
-                            <constraint firstItem="DF4-lO-Emc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="EYX-sA-c0P"/>
-                            <constraint firstItem="fVg-wj-svY" firstAttribute="top" secondItem="DF4-lO-Emc" secondAttribute="bottom" constant="90" id="GaY-WT-eqc"/>
-                            <constraint firstItem="y9I-J0-YqT" firstAttribute="top" secondItem="fVg-wj-svY" secondAttribute="bottom" id="KdX-a6-k2y"/>
-                            <constraint firstItem="y9I-J0-YqT" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="Vqa-RF-oHP"/>
-                            <constraint firstItem="fVg-wj-svY" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="XoT-kg-JYa"/>
-                            <constraint firstItem="y9I-J0-YqT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jL4-rX-B9y"/>
-                            <constraint firstItem="y9I-J0-YqT" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.5" id="uxg-OC-liN"/>
-                            <constraint firstItem="DF4-lO-Emc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="z33-RH-ULg"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>

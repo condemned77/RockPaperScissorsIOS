@@ -15,6 +15,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    
+    @IBAction func rockButtonTouchUpInside(_ sender: UIButton) {
+    }
+    
+    @IBAction func paperButtonTouchUpInside(_ sender: UIButton) {
+    }
+    
+    @IBAction func scissorsButtonTouchUpInside(_ sender: UIButton) {
+    }
+    
+    
 }
+
 
