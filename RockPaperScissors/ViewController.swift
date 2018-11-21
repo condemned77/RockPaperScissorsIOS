@@ -33,10 +33,7 @@ class ViewController: UIViewController {
     func startGame(withUserChoice weapon : Weapon) {
         let game = Game(withUserChoice: weapon)
         let result = game.start()
-        
-        switch result {
-        case .Win, .Loss, .Draw: print(result.rawValue)
-        }
+        print(result.rawValue)
     }
     
 }

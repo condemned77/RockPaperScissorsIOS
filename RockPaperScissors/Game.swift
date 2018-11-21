@@ -8,8 +8,20 @@
 
 import Foundation
 
+let gameRules: [(weapon : Weapon, againstWeapon: Weapon, result: Result)] = [
 
-enum Result: String {
+    (weapon: .Rock, againstWeapon: .Paper, result: .Loss),
+    (weapon: .Rock, againstWeapon: .Scissors, result:  .Win),
+
+    (weapon: .Paper, againstWeapon: .Scissors, result:  .Loss),
+    (weapon: .Paper, againstWeapon: .Rock, result: .Win),
+
+    (weapon: .Scissors, againstWeapon: .Rock, result: .Loss),
+    (weapon: .Scissors, againstWeapon: .Paper, result: .Win),
+    
+]
+
+enum Result : String {
     case Win = "You won!"
     case Loss = "You lost, better luck next time"
     case Draw = "It's a Draw!"
@@ -19,7 +31,7 @@ enum Weapon : Int, CaseIterable {
     case Rock = 0
     case Paper = 1
     case Scissors = 2
-    }
+}
 
 class Game {
     let userChoice : Weapon
@@ -31,11 +43,31 @@ class Game {
     
     
     func start() -> Result {
-        let _ = chooseRandomWeapon()
-        
-        return .Loss
+        let computerWeapon = chooseRandomWeapon()
+        let result = evaluate(userChoice: self.userChoice, against: computerWeapon)
+        print("\(userChoice) against \(computerWeapon) = \(String(describing: result))")
+        return result
     }
     
+    func evaluate(userChoice: Weapon, against computerChoice: Weapon) -> Result {
+        guard userChoice != computerChoice else {
+            return .Draw
+        }
+        var gameResult : Result!
+        for (weapon, againstWeapon, result) in gameRules {
+            guard weapon == userChoice else {
+                continue
+            }
+            
+            guard againstWeapon == computerChoice else {
+                continue
+            }
+            gameResult = result
+            break;
+        }
+        return gameResult
+    }
+
     
     func chooseRandomWeapon() -> Weapon {
         let randomNumber = arc4random_uniform(UInt32(Weapon.allCases.count))
