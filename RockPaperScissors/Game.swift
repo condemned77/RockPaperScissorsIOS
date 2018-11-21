@@ -8,15 +8,37 @@
 
 import Foundation
 
+
 enum Result: String {
     case Win = "You won!"
     case Loss = "You lost, better luck next time"
     case Draw = "It's a Draw!"
 }
 
-enum Weapon {
-    case Rock
-    case Paper
-    case Scissors
-}
+enum Weapon : Int, CaseIterable {
+    case Rock = 0
+    case Paper = 1
+    case Scissors = 2
+    }
 
+class Game {
+    let userChoice : Weapon
+    
+    init(withUserChoice userChoice : Weapon) {
+        self.userChoice = userChoice
+    }
+    
+    
+    
+    func start() -> Result {
+        let _ = chooseRandomWeapon()
+        
+        return .Loss
+    }
+    
+    
+    func chooseRandomWeapon() -> Weapon {
+        let randomNumber = arc4random_uniform(UInt32(Weapon.allCases.count))
+        return Weapon(rawValue: Int(randomNumber))!
+    }
+}
