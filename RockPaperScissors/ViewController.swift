@@ -17,14 +17,19 @@ class ViewController: UIViewController {
 
     
     @IBAction func rockButtonTouchUpInside(_ sender: UIButton) {
+        startGame(withUserChoice: .Rock)
     }
     
     @IBAction func paperButtonTouchUpInside(_ sender: UIButton) {
+        startGame(withUserChoice: .Paper)
     }
     
     @IBAction func scissorsButtonTouchUpInside(_ sender: UIButton) {
+        startGame(withUserChoice: .Scissors)
     }
     
+    func startGame(withUserChoice weapon : Weapon) {
+    }
     
 }
 
