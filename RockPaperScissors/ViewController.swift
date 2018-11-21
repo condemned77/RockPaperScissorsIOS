@@ -11,6 +11,7 @@ import UIKit
 
 
 class ViewController: UIViewController {
+    @IBOutlet weak var gameResultTextView: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +33,20 @@ class ViewController: UIViewController {
     
     func startGame(withUserChoice weapon : Weapon) {
         let game = Game(withUserChoice: weapon)
-        let result = game.start()
-        print(result.description)
+        let recording = game.start()
+        print(recording.description)
+        
+        presentGameRecording(recording)
     }
     
+    func presentGameRecording(_ recording: GameRecording) {
+        let presentString = """
+                            You chose: \(recording.userChoice)\n
+                            Computer chose: \(recording.computerChoice)\n
+                            This results in a: \(recording.gameResult)
+                            """
+        gameResultTextView.text = presentString
+    }
 }
 
 
