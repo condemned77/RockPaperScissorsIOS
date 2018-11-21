@@ -33,6 +33,16 @@ enum Weapon : Int, CaseIterable {
     case Scissors = 2
 }
 
+struct GameRecording {
+    let gameResult : Result
+    let userChoice : Weapon
+    let computerChoice : Weapon
+    
+    var description : String {
+        return "\(userChoice) against \(computerChoice) = \(String(describing: gameResult))"
+    }
+}
+
 class Game {
     let userChoice : Weapon
     
@@ -40,13 +50,11 @@ class Game {
         self.userChoice = userChoice
     }
     
-    
-    
-    func start() -> Result {
+    func start() -> GameRecording {
         let computerWeapon = chooseRandomWeapon()
         let result = evaluate(userChoice: self.userChoice, against: computerWeapon)
-        print("\(userChoice) against \(computerWeapon) = \(String(describing: result))")
-        return result
+        
+        return GameRecording(gameResult: result, userChoice: self.userChoice, computerChoice: computerWeapon)
     }
     
     func evaluate(userChoice: Weapon, against computerChoice: Weapon) -> Result {
